@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js"></script>
+  <title>Homologa ya v2.1</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li>
+          <button class="boton-header">≡</button>
+        </li>
+        <li>
+          <h1 class="titulo-marca titulo-header espaciado-estrecho">Homologa Ya!</h1>
+          <p class="texto-header">Plataforma de Homologación de Insumos • Procesamiento local <span class="font-semibold">.xlsx / .csv</span></p>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="seccion-carga" class="seccion-carga-estilos">
+      <h2 class="subtitulo-cargar-archivos">1. Cargar archivos</h2>
+      <div class="grid-carga">
+        <div id="zona-expediente" class=" zona">
+          <input type="file" name="file-input-expediente" id="file-input-expediente" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-nube" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>
+          <p class="texto-gris">Arrastra o haz clic para subir el <b>Expediente Técnico</b> (.xlsx, .csv)</p>
+          <p class="texto-verde" id="filename-expediente"></p>
+        </div>
+        <div id="zona-siga" class=" zona">
+          <input type="file" name="file-input-expediente" id="file-input-expediente" accept=".csv,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel">
+          <svg xmlns="http://www.w3.org/2000/svg" class="svg-nube" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+          </svg>
+          </svg>
+          <p class="texto-gris">Arrastra o haz clic para subir el <b>Catálogo de Compras SIGA</b>
+          <p class="texto-verde" id="filename-expediente"></p>
+
+        </div>
+      </div>
+      <button id="btn-empezar-homologacion" class="btn-empezar-homologacion-estilos">Empezar a homologar</button>
+    </section>
+    <div class="texto-plantilla">
+      <p>¿Necesitas formatos? Descarga nuestras plantillas:</p>
+      <button id="btn-descarga-plantillas" type="button" class="btn-descarga-plantillas-estilos">Plantilla Expediente.xlsx</button>
+      <span class="separador">|</span>
+      <button type="button" class="btn-descarga-plantillas-estilos">Plantilla Catálogo.xlsx</button>
+      <p id="mensaje-error" class="mensaje-error-estilos">ejemplo(borrar despues)</p>
+      <p class="advertencia-tamanho-archivo">Nota: todo se procesa en tu navegador. Archivos muy grandes (>30MB) pueden impactar el rendimiento.</p>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>
